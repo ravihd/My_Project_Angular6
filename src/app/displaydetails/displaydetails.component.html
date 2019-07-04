@@ -1,0 +1,30 @@
+<table  >
+        <tr>
+            <td colspan="3">
+                <div class="name">{{httpdata.name}}</div>
+            </td>
+        </tr>
+        <tr>
+            <td class="details-td">
+                <div class="label">Phone</div> : <div class="phone">{{httpdata.phone}}</div>
+                <br><div class="label">Email</div> : <div class="mobile">{{httpdata.email}}</div>
+                <br><div class="label">Website</div> : <div class="email">{{httpdata.website}}</div>
+            </td>
+            <td class="description-td">
+                <div class="description" spellcheck="false">
+                    <h4 style="color: orange; text-decoration: underline">Adress</h4>
+                    street : {{httpdata.address.street}}<br>
+                    city : {{httpdata.address.city}}<br>
+                    zipcode :  {{httpdata.address.zipcode}}<br>
+                    
+            
+                </div>
+            
+            </td>
+        </tr>  
+    </table>
+    <button (click)="Logoutbutton()" style="margin-left: 93%; margin-top :3%">Logout</button>
+   <button (click)="backbutton()" style=" margin :0%">Back</button>
+    
+
+    

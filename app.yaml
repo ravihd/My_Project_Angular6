@@ -1,0 +1,6 @@
+ntime: python27
+threadsafe: true
+handlers:
+- url: /
+  upload: dist/loginlogout/index.html
+- url: /
