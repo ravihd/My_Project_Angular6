@@ -1,3 +1,17 @@
-<h1>Home Page</h1>
 
+<div class="container-fluid text-center pb-5">
+    <!-- <button (click)="logoutbutton()" style="margin-left: 93%">Logout</button> -->
+  <div class="row">
+    <div class="col-4" *ngFor="let details of Apidata" (click)="myfunction(details.id)">
+      <div class="card">
+        <div class="card-block">
+          <img src="../../assets/img/a.jpg"  alt="My test image" style="width:300px" >
+          <h5 class="card-text">{{details.name}}</h5>
+          <p class="card-text">Phone Number : {{details.phone}}</p>
+        </div>
+      </div>
+    </div>
 
+  </div>
+  <!-- <button (click)="logoutbutton()" style="margin-left: 93%">Logout</button> -->
+</div>

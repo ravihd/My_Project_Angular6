@@ -29,6 +29,6 @@ export class DisplaydetailsComponent implements OnInit {
 
    }
    backbutton(){
-     this.router.navigateByUrl("logout")
+     this.router.navigateByUrl("home")
    }
 }

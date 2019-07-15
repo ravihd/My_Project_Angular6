@@ -16,10 +16,15 @@ import { DisplaydetailsComponent } from './displaydetails/displaydetails.compone
 import { FooterComponent } from './footer/footer.component';
 import { SignupComponent } from './signup/signup.component';
 import {ReactiveFormsModule } from '@angular/forms';
+import { CardComponent } from './card/card.component';
+//import { LoadfileComponent } from './loadfile/loadfile.component';
+import { MatDatepickerModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { DisplaydetailsDirective } from './displaydetails.directive'
 
 
 const appRoutes: Routes = [
+  {path: '', component: HomeComponent},
   { path: 'logout', component: LogoutCompComponent },
   { path: 'login', component: LoginCompComponent },
   { path: 'home', component:HomeComponent},
@@ -42,12 +47,17 @@ const appRoutes: Routes = [
   HeaderComponent,
   DisplaydetailsComponent,
   FooterComponent,
-  SignupComponent
+  SignupComponent,
+  CardComponent
    ],
   imports: [
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
+    MatDatepickerModule,
+      MatInputModule,
+      MatNativeDateModule,
     RouterModule.forRoot( appRoutes),
     HttpClientModule
 

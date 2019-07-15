@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyserviceService } from '../myservice.service';
 import {Router} from '@angular/router'
-
 @Component({
   selector: 'app-logout-comp',
   templateUrl: './logout-comp.component.html',

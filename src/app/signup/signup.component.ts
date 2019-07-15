@@ -12,11 +12,13 @@ export class SignupComponent implements OnInit {
 
   registerForm: FormGroup;
   submitted = false;
+  myData: Array<any>;
 
   constructor(private formBuilder: FormBuilder, private service:MyserviceService, private router: Router) { }
 
   ngOnInit() {
       this.registerForm = this.formBuilder.group({
+          DOB  : ['', Validators.required],
           firstName: ['', Validators.required],
           lastName: ['', Validators.required],
           email: ['', [Validators.required, Validators.email]],

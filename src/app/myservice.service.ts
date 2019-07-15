@@ -16,10 +16,12 @@ export class MyserviceService {
   value1: any;
   userdetails:any;
   newuer: any;
-  
+  date : any;
+ // dob: any;
 
 
   constructor(private http: HttpClient) {
+   // this.date = new Date();
 
   }
 
@@ -50,19 +52,21 @@ export class MyserviceService {
 
   Updateuser(data)
   {
+  //this.dob=data.DOB
     this.value1=data.firstName;
     console.log(data.email, data.password)
       this.http.post(user_url,
         {
          "email":data.email,
           "Password":data.password,
-          "FullName" : data.firstName +" "+ data.lastName
+          "FullName" : data.firstName +" "+ data.lastName,
+           "DOB" : data.DOB
         }).subscribe( error  => {
           
           console.log("Error", error);
           
           });
-        
+   // console.log(this.dob.substring(1,10))
   }
 
   
