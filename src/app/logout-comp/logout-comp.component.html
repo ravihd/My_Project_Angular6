@@ -1,2 +1,10 @@
 <h1 align="center">Welcome</h1>
 <button (click)="logoutbutton()" style="margin-left: 93%">Logout</button>
+
+
+<input
+  style="display: none"
+  type="file" (change)="onFileChanged($event)"
+  #fileInput>
+<button (click)="fileInput.click()">Select File</button>
+<button (click)="onUpload()">Upload!</button>
